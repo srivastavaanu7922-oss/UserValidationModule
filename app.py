@@ -14,10 +14,10 @@ CREATE TABLE IF NOT EXISTS users (
 """)
 
 conn.commit()
-cursor.execute("INSERT INTO users VALUES (?, ?, ?)", ("Anuradha", "anuradha@gmail.com", "9876543210"))
-cursor.execute("INSERT INTO users VALUES (?, ?, ?)", ("Khushi", "khushi@gmail.com", "9876501234"))
 
-conn.commit()
+cursor.execute("SELECT COUNT(*) FROM users")
+count = cursor.fetchone()[0]
+
 
 @app.route("/", methods=["GET", "POST"])
 def home():
