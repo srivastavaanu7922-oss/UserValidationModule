@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Registration</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
@@ -8,7 +10,7 @@
 
     <form method="POST">
 
-    <h1>User Registration</h1>
+        <h1>User Registration</h1>
 
         <label>Full Name</label><br>
         <input type="text" name="fullname" placeholder="Enter your name">
@@ -23,7 +25,7 @@
 
         {% if result %}
         <p style="text-align:center; margin-top:15px; font-weight:bold;">
-        {{ result }}
+            {{ result }}
         </p>
         {% endif %}
 
